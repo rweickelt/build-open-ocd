@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  openocd:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    working_dir: /project
+    volumes:
+      - .:/project
+    network_mode: bridge
+
